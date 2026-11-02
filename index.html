@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CipherNest | Secure File Encryption & Decryption</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🔐 CipherNest</div>
+        <div class="nav-text">Secure File Protection</div>
+    </header>
+
+    <section class="hero">
+        <div class="tag">ADVANCED FILE SECURITY</div>
+
+        <h1>
+            Secure Your Files with
+            <span>CipherNest</span>
+        </h1>
+
+        <p>
+            Protect your important files using advanced AES-256-GCM
+            encryption. Encrypt and decrypt your files securely
+            with password-based protection.
+        </p>
+    </section>
+
+    <section class="actions" id="home">
+
+        <div class="action-card">
+            <div class="card-icon">🔒</div>
+            <h2>Encrypt File</h2>
+
+            <p>
+                Convert your important files into encrypted
+                files that cannot be accessed without the password.
+            </p>
+
+            <button id="encryptBtn">Encrypt Now</button>
+        </div>
+
+        <div class="action-card">
+            <div class="card-icon">🔓</div>
+            <h2>Decrypt File</h2>
+
+            <p>
+                Restore your encrypted files using the correct
+                password and access your original data.
+            </p>
+
+            <button id="decryptBtn">Decrypt Now</button>
+        </div>
+
+    </section>
+
+    <section class="workspace" id="workspace">
+
+        <div class="upload-card">
+
+            <h2 id="modeTitle">File Encryption</h2>
+
+            <div class="field">
+                <label for="fileInput">Select Your File</label>
+
+                <input type="file" id="fileInput">
+
+                <div class="file-info" id="fileInfo">
+                    <h3>📁 File Information</h3>
+
+                    <div class="file-name" id="fileName"></div>
+
+                    <div class="info-row">
+                        <span>File type</span>
+                        <span id="fileType"></span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>File size</span>
+                        <span id="fileSize"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="password">Enter Password</label>
+
+                <div class="password-wrapper">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="new-password"
+                    >
+
+                    <button
+                        type="button"
+                        class="eye-btn"
+                        id="togglePassword"
+                        aria-label="Show password"
+                    >👁️</button>
+                </div>
+
+                <div class="strength-box" id="strengthBox">
+
+                    <div class="strength-info">
+                        <span class="strength-label">
+                            Password Strength
+                        </span>
+
+                        <span id="strengthText">Not entered</span>
+                    </div>
+
+                    <div class="strength-bars">
+                        <div class="strength-bar" id="bar1"></div>
+                        <div class="strength-bar" id="bar2"></div>
+                        <div class="strength-bar" id="bar3"></div>
+                        <div class="strength-bar" id="bar4"></div>
+                    </div>
+
+                    <p id="strengthTip">
+                        Use 12+ characters with uppercase, lowercase,
+                        numbers and symbols.
+                    </p>
+                </div>
+            </div>
+
+            <button id="processBtn">Encrypt File</button>
+
+            <div class="progress-box" id="progressBox">
+
+                <div class="progress-label">
+                    <span id="progressText">Processing...</span>
+                    <span>In progress</span>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+            <p id="status" role="status" aria-live="polite"></p>
+
+            <button class="back-btn" id="backBtn">
+                Back to Home
+            </button>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 CipherNest | Secure File Encryption & Decryption
+    </footer>
+
+</body>
+</html>

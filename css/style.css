@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d1b;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #253149;
+}
+
+.logo {
+    color: #42d9ff;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-text {
+    color: #aab5c9;
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    padding: 85px 20px 45px;
+}
+
+.tag {
+    display: inline-block;
+    color: #42d9ff;
+    background: #10283a;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #42d9ff;
+}
+
+.hero p {
+    color: #aab5c9;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+}
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.action-card {
+    width: 320px;
+    background: #111b30;
+    border: 1px solid #263650;
+    border-radius: 16px;
+    padding: 35px 28px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    border-color: #42d9ff;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.action-card h2 {
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.action-card p {
+    color: #aab5c9;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+button {
+    background: #13bde5;
+    color: #06111d;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #65e3ff;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.workspace {
+    display: none;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.upload-card {
+    background: #111b30;
+    border: 1px solid #263650;
+    border-radius: 16px;
+    padding: 35px;
+    width: 100%;
+    max-width: 480px;
+}
+
+.upload-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.field {
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 10px;
+    color: #d4deee;
+}
+
+input[type="file"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 13px;
+    background: #080d1b;
+    border: 1px solid #34445e;
+    border-radius: 8px;
+    color: white;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.password-wrapper .eye-btn {
+    position: absolute;
+    right: 5px;
+    width: 40px;
+    padding: 8px;
+    background: transparent;
+    color: #42d9ff;
+    font-size: 19px;
+    border: none;
+}
+
+.password-wrapper .eye-btn:hover {
+    background: transparent;
+    color: #65e3ff;
+}
+
+.strength-box {
+    margin-top: 12px;
+}
+
+.strength-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.strength-label {
+    color: #aab5c9;
+    font-size: 13px;
+}
+
+#strengthText {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.strength-bars {
+    display: flex;
+    gap: 6px;
+}
+
+.strength-bar {
+    height: 5px;
+    flex: 1;
+    background: #34445e;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+#strengthTip {
+    color: #8190a8;
+    font-size: 12px;
+    margin-top: 9px;
+    line-height: 1.5;
+}
+
+.file-info {
+    display: none;
+    background: #080d1b;
+    border: 1px solid #34445e;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.file-info h3 {
+    color: #42d9ff;
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+
+.file-name {
+    overflow-wrap: anywhere;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 9px;
+    font-size: 12px;
+}
+
+.info-row span:first-child {
+    color: #8190a8;
+}
+
+.info-row span:last-child {
+    color: #d4deee;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.progress-box {
+    display: none;
+    margin-top: 20px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #aab5c9;
+    margin-bottom: 10px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 7px;
+    background: #263650;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 35%;
+    height: 100%;
+    background: #42d9ff;
+    border-radius: 10px;
+    animation: loading 1.2s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-120%);
+    }
+
+    100% {
+        transform: translateX(320%);
+    }
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    color: #42d9ff;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#status.success {
+    color: #16c784;
+}
+
+#status.error {
+    color: #ff6474;
+}
+#processBtn {
+    display: block;
+    margin: 20px auto;
+    min-width: 180px;
+}
+.back-btn {
+    width: 100%;
+    background: transparent;
+    color: #42d9ff;
+    border: 1px solid #34445e;
+    margin-top: 15px;
+}
+
+.back-btn:hover {
+    background: #10283a;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #253149;
+    padding: 25px;
+    color: #8190a8;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .action-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .nav-text {
+        font-size: 11px;
+    }
+}
+.action-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    text-align: center;
+}
